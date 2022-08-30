@@ -3,8 +3,8 @@ pipeline{
 	stages{
 		stage('build'){
 		steps{
-			sh 'docker build Dockerfile todoapp'
-			sh 'docker run -p 8000:8000 -d todoapp'
+			bat 'docker build Dockerfile todoapp'
+			bat 'docker run -p 8000:8000 -d todoapp'
 		}
 			}
 
