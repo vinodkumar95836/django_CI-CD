@@ -3,8 +3,8 @@ pipeline{
 	stages{
 		stage('build'){
 		steps{
-			sh 'sudo docker build /Dockerfile todoapp'
-			sh 'sudo docker run -p 8000:8000 -d todoapp'
+			sh 'docker build Dockerfile todoapp'
+			sh 'docker run -p 8000:8000 -d todoapp'
 		}
 			}
 
