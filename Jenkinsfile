@@ -1,17 +1,11 @@
 pipeline {
-    agent { dockerfile true }
+    agent {
+        docker { image 'node:16.13.1-alpine' }
+    }
     stages {
         stage('Test') {
             steps {
-                bat 'node --version'
-                bat 'svn --version'
-            }
-        }
-
-stage('Build') {
-            steps {
-                echo 'Build is successful'
-                
+                sh 'node --version'
             }
         }
     }
