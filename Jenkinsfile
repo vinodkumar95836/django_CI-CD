@@ -8,5 +8,11 @@ pipeline {
                 bat 'node --version'
             }
         }
+        
+        stage('Build') {
+            steps {
+               echo 'Build is succcessful'
+            }
+        }
     }
 }
