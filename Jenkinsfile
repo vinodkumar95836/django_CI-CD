@@ -7,5 +7,12 @@ pipeline {
                 bat 'svn --version'
             }
         }
+
+stage('Build') {
+            steps {
+                echo 'Build is successful'
+                
+            }
+        }
     }
 }
